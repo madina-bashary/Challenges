@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+      Clean, Vegan Makeup &amp; Skincare | Kylie Cosmetics by Kylie Jenner
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      @font-face {
+        font-family: poppins;
+        src: url("fonts/poppins-v5-latin-300.ttf");
+      }
+      * {
+        font-family: poppins;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+
+      /* Navbar Styles */
+      nav {
+        position: fixed;
+        z-index: 2222;
+        top: 0;
+        height: 90px;
+        width: 100%;
+        padding: 10px 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        background: linear-gradient(
+          to right,
+          #9f8088,
+          #9f8088,
+          #f6e5eb,
+          #f6e5eb,
+          #f6e5eb
+        );
+        box-shadow: 1px 2px 10px #704f57;
+      }
+      .nav--banner {
+        position: fixed;
+        z-index: 2222;
+        top: 0px;
+        right: 0px;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/971/original/nav.jpeg?1676643632");
+        background-position: center;
+        background-size: cover;
+        height: 90px;
+        width: 600px;
+      }
+      .shop--btn {
+        padding: 10px 10px;
+        margin: 20px 90px;
+        float: right;
+        background-color: #f6e5eb;
+        border: 1px solid #704f57;
+        border-radius: 2px;
+        font-size: 0.9em;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .shop--btn a {
+        text-decoration: none;
+        color: #704f57;
+      }
+      /* Main Content Styles  */
+      .main--banner {
+        margin: 90px 0;
+        width: 100%;
+        height: 150px;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/980/original/intro2.jpg?1676644403");
+        background-position: center;
+        background-size: contain;
+      }
+      .intro {
+        width: 100%;
+        position: relative;
+        top: 0px;
+        height: 600px;
+        padding: 40px;
+        margin-bottom: 60px;
+      }
+      .foundation {
+        position: relative;
+        width: 640px;
+        height: 440px;
+        margin: 30px auto 0 auto;
+        border-radius: 50%;
+        background-color: #ffcab0;
+        display: flex;
+        padding-top: 90px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 11;
+        transition: ease-in-out 400ms;
+      }
+      .foundation p {
+        margin: 0px 80px;
+        font-size: 1.3em;
+        font-family: "Times New Roman", Times, serif;
+        line-height: 1.6em;
+      }
+      .back--div,
+      .back--div2,
+      .back--div3 {
+        position: absolute;
+        top: 150px;
+        right: 23%;
+        width: 640px;
+        height: 440px;
+        margin: 0px auto;
+        border-radius: 50%;
+        background-color: rgba(255, 202, 176, 0.5);
+        border: 1px solid #ffcab0;
+      }
+      .back--div2 {
+        top: 20px;
+        left: 10px;
+        background-color: rgba(170, 139, 150, 0.5);
+        border: 1px solid #aa8b96;
+      }
+      .back--div3 {
+        top: 0px;
+        left: 30%;
+        background-color: rgba(224, 255, 205, 0.5);
+        border: 1px solid #cbecb7;
+      }
+      .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0px 0 50px 0;
+      }
+      .category {
+        display: flex;
+        flex-direction: column;
+        margin: 1.8% 2%;
+        width: 350px;
+        height: 450px;
+        cursor: pointer;
+        border: 1px solid #ffcab0;
+        border-radius: 3px;
+      }
+      .category--name {
+        font-size: 16px;
+        letter-spacing: 1.2px;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .category--img {
+        width: 100%;
+        height: 300px;
+        background-image: url("1.jpeg");
+        background-position: center;
+        background-size: cover;
+        transition: ease-in-out 300ms;
+      }
+      .one {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/960/original/1.jpeg?1676643077");
+      }
+      .one:hover {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/975/original/1.jpg?1676644335");
+      }
+      .two {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/962/original/2.jpeg?1676643088");
+      }
+      .two:hover {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/976/original/2.jpg?1676644347");
+      }
+      .three {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/963/original/3.jpeg?1676643102");
+      }
+      .three:hover {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/977/original/3.jpg?1676644356");
+      }
+      .four {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/964/original/4.jpeg?1676643539");
+      }
+      .four:hover {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/965/original/4.jpg?1676643549");
+      }
+      .five {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/966/original/5.jpeg?1676643557");
+      }
+      .five:hover {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/978/original/5.jpg?1676644376");
+      }
+      .six {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/967/original/6.jpeg?1676643567");
+      }
+      .six:hover {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/979/original/6.jpg?1676644391");
+      }
+
+      /* Footer Styles  */
+      .kylie--footer {
+        background-color: #000;
+        padding: 1px 2px 0;
+        color: #fff;
+      }
+      .footer--contact {
+        display: inline-block;
+        margin: 0px 50px;
+        text-align: center;
+      }
+      .social-follow__title {
+        font-size: 1.1em;
+        margin: 5px;
+      }
+      .kylie--footer img {
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        background-color: transparent;
+      }
+
+      @media screen and (max-width: 900px) {
+        .footer--contact {
+          margin: 0px 20px;
+        }
+        .main--banner,
+        .nav--banner {
+          display: none;
+        }
+        .intro {
+          margin-top: 120px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        .nav--banner,
+        .main--banner {
+          display: none;
+        }
+        .container {
+          flex-direction: column;
+        }
+        .intro {
+          top: 120px;
+          margin: 0;
+          padding-bottom: 0;
+          height: 850px;
+        }
+        .back--div,
+        .back--div2,
+        .back--div3 {
+          width: 90%;
+        }
+        .foundation {
+          width: 100%;
+          height: 500px;
+        }
+        .footer--contact {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 40px;
+        }
+        .categories {
+          flex-direction: column;
+          position: relative;
+          margin-top: -90px;
+        }
+        .category {
+          width: 80%;
+          margin: 30px auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/981/original/kylie_Logo.png?1676644950"
+          alt="KYLIECOSMETICS"
+          height="25"
+          width="80"
+        />
+        Cosmetics
+      </nav>
+      <div class="nav--banner"></div>
+    </header>
+    <main>
+      <div class="main--banner"></div>
+      <div class="intro">
+        <div class="foundation">
+          <p>
+            <b>Kylie Cosmetics</b> is an American cosmetics company founded in
+            2016 and owned by <b>Kylie Jenner</b>. Kylies's Cosmetics included
+            <b>Kylie</b> Skin, <b>Kylie</b> Baby, Lip Combos, Lip Cleanser &
+            Mask ...
+          </p>
+          <button class="shop--btn">
+            <a href="https://kyliecosmetics.com/">SHOP NOW</a>
+          </button>
+        </div>
+        <div class="back--div"></div>
+        <div class="back--div2"></div>
+        <div class="back--div3"></div>
+      </div>
+      <div class="categories">
+        <div class="category">
+          <div class="category--img one"></div>
+          <h2 class="category--name">CHARM VELVET LIP KIT</h2>
+          <button class="shop--btn">
+            <a href="https://kyliecosmetics.com/">SHOP NOW</a>
+          </button>
+        </div>
+        <div class="category">
+          <div class="category--img two"></div>
+          <h2 class="category--name">PAMPER YOUR POUT BUNDLE - KYLIE</h2>
+          <button class="shop--btn">
+            <a href="https://kyliecosmetics.com/">SHOP NOW</a>
+          </button>
+        </div>
+        <div class="category">
+          <div class="category--img three"></div>
+          <h2 class="category--name">FEELING NEUTRAL LIP & CHEEK GLOW</h2>
+          <button class="shop--btn">
+            <a href="https://kyliecosmetics.com/">SHOP NOW</a>
+          </button>
+        </div>
+        <div class="category">
+          <div class="category--img four"></div>
+          <h2 class="category--name">BESITOS GLOSS DRIP</h2>
+          <button class="shop--btn">
+            <a href="https://kyliecosmetics.com/">SHOP NOW</a>
+          </button>
+        </div>
+        <div class="category">
+          <div class="category--img five"></div>
+          <h2 class="category--name">OH YOU FANCY HIGH GLOSS</h2>
+          <button class="shop--btn">
+            <a href="https://kyliecosmetics.com/">SHOP NOW</a>
+          </button>
+        </div>
+        <div class="category">
+          <div class="category--img six"></div>
+          <h2 class="category--name">AHA + ENZYME GLOW MASK</h2>
+          <button class="shop--btn">
+            <a href="https://kyliecosmetics.com/">SHOP NOW</a>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="kylie--footer">
+      <h3 style="text-align: center; font-size: 1.5em; margin: 20px">
+        CONNECT WITH US
+      </h3>
+      <hr />
+      <div
+        class="container"
+        style="display: flex; justify-content: center; padding: 20px"
+      >
+        <div class="footer--contact">
+          <h6 class="social-follow__title">@KYLIEJENNER</h6>
+          <div class="footer--social">
+            <a href="https://www.instagram.com/kyliejenner/" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/969/original/instagram.png?1676643590"
+            /></a>
+            <a href="https://www.facebook.com/KylieJenner" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/968/original/facebook.png?1676643582"
+            /></a>
+            <a href="https://twitter.com/KylieJenner" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/973/original/twitter.png?1676643651"
+            /></a>
+            <a
+              href="https://www.youtube.com/channel/UCWkYXtnAuu7VTLPwUcRSB6A"
+              target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/974/original/youtube.png?1676643658"
+            /></a>
+            <a
+              href="https://www.tiktok.com/@kyliejenner?lang=en"
+              target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/972/original/tiktok.png?1676643643"
+            /></a>
+          </div>
+        </div>
+        <div class="footer--contact">
+          <h6 class="social-follow__title">@KYLIECOSMETICS</h6>
+          <div class="footer--social">
+            <a href="https://www.instagram.com/kyliejenner/" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/969/original/instagram.png?1676643590"
+            /></a>
+            <a href="https://www.facebook.com/KylieJenner" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/968/original/facebook.png?1676643582"
+            /></a>
+            <a href="https://twitter.com/KylieJenner" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/973/original/twitter.png?1676643651"
+            /></a>
+            <a
+              href="https://www.youtube.com/channel/UCWkYXtnAuu7VTLPwUcRSB6A"
+              target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/974/original/youtube.png?1676643658"
+            /></a>
+            <a
+              href="https://www.tiktok.com/@kyliejenner?lang=en"
+              target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/972/original/tiktok.png?1676643643"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer--contact">
+          <h6 class="social-follow__title">@KYLIESKIN</h6>
+          <div class="footer--social">
+            <a href="https://www.instagram.com/kyliejenner/" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/969/original/instagram.png?1676643590"
+            /></a>
+            <a href="https://www.facebook.com/KylieJenner" target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/968/original/facebook.png?1676643582"
+            /></a>
+
+            <a
+              href="https://www.youtube.com/channel/UCWkYXtnAuu7VTLPwUcRSB6A"
+              target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/974/original/youtube.png?1676643658"
+            /></a>
+            <a
+              href="https://www.tiktok.com/@kyliejenner?lang=en"
+              target="_blank"
+              ><img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/067/972/original/tiktok.png?1676643643"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <hr style="color: #333" />
+      <div
+        class="footer--copyright"
+        style="padding: 10px 0px; display: flex; justify-content: center"
+      >
+        <small>&copy; 2023 All Copyrights Reserved To Madina Bashary</small>
+      </div>
+    </footer>
+
+    <script>
+      const colors = [
+        "#704f57",
+        "#9f8088",
+        "#bba4aa",
+        "#fdffcd",
+        "#e0ffcd",
+        "#ffebbb",
+        "#ffcab0",
+        "#aa8b96",
+        "#f9c5d2",
+        "#F1956B",
+        "#F0A6A8",
+      ];
+      function backgroundChanger() {
+        let c = Math.floor(Math.random() * colors.length);
+        let f = document.querySelector(".foundation");
+        // alert(colors[c]);
+        f.style.backgroundColor = colors[c];
+      }
+      setInterval(backgroundChanger, 1500);
+    </script>
+  </body>
+</html>
